@@ -45,7 +45,7 @@ namespace AppHotelEtec
             }
             else
             {
-                MainPage = new NavigationPage(new View.Login2());
+                MainPage = new NavigationPage(new View.Login());
 
             }
 

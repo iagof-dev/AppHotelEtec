@@ -15,6 +15,13 @@ namespace AppHotelEtec.View
         public HospedagemCalculada()
         {
             InitializeComponent();
+
+            NavigationPage.SetHasNavigationBar(this, false);
+        }
+
+        private void Button_Clicked(object sender, EventArgs e)
+        {
+            App.Current.MainPage = new ContratacaoHospedagem();
         }
     }
 }

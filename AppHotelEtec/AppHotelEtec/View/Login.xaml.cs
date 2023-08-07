@@ -10,16 +10,19 @@ using Xamarin.Forms.Xaml;
 namespace AppHotelEtec.View
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class Login2 : ContentPage
+    public partial class Login : ContentPage
     {
 
         App PropriedadesApp;
 
-        public Login2()
+        public Login()
         {
             InitializeComponent();
 
             NavigationPage.SetHasNavigationBar(this, false);
+
+            App.Current.Properties.Remove("usuario_logado");
+
 
             PropriedadesApp = (App)Application.Current;
 
@@ -32,6 +35,7 @@ namespace AppHotelEtec.View
 
             if (usuario == "aluno" && senha == "etec")
             {
+
                 App.Current.Properties.Add("usuario_logado", usuario);
                 App.Current.MainPage = new ContratacaoHospedagem();
             }
